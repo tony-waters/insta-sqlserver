@@ -17,8 +17,8 @@ WORKDIR /usr/src/app
 #COPY package.json /usr/src/app/
 #RUN npm install
 #
-## Bundle app source
-#COPY . /usr/src/app
+# Bundle app source
+COPY . /usr/src/app
 
 # Grant permissions for the import-data script to be executable
 RUN chmod +x /usr/src/app/import-data.sh
