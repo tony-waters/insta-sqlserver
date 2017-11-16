@@ -9,9 +9,9 @@ FROM microsoft/mssql-server-linux:2017-GA
 ## Install tedious, the driver for SQL Server for Node.js
 #RUN npm install tedious
 #
-## Create app directory
-#RUN mkdir -p /usr/src/app
-#WORKDIR /usr/src/app
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 #
 ## Install app dependencies
 #COPY package.json /usr/src/app/
