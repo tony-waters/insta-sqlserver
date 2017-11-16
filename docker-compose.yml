@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+  sqlserver:
+    container_name: sqlserver
+    image: bit1/insta-sqlserver
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+    ports:
+      - 8433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password
+
